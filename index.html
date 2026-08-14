@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K_J_ // Mentoring — Matematyka & Fizyka</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
+
+  <body>
+    <nav>
+      <div class="brand">K_J_ // Mentoring</div>
+      <div class="nav-links">
+        <a href="#about">O_mnie_</a>
+        <a href="#method">Metoda_</a>
+        <a href="#offer">Oferta_</a>
+        <a href="#contact">Kontakt_</a>
+      </div>
+    </nav>
+
+    <div id="canvas-container"></div>
+
+    <section id="about">
+      <div class="hero-grid">
+        <img src="images/portrait.jpg" alt="Zdjęcie" class="profile-img" />
+        <div>
+          <h1>Debugowanie wiedzy_</h1>
+          <p class="subtitle">
+            Nie uczę wzorów na pamięć. Pokazuję algorytmy myślenia i buduję
+            intuicję fizyczną, dzięki której zadania rozwiązują się same.
+          </p>
+          <p>
+            Jestem inżynierem programistą oraz studentem psychologii. Łączę
+            inżynieryjną precyzję z wiedzą o procesach poznawczych -- pomagam
+            przechodzić od stanu „nic z tego nie rozumiem” do swobodnego
+            rozwiązywania problemów maturalnych bez stresu i paraliżu.
+          </p>
+
+          <div class="note-box">
+            * Nazwa Kiki odnosi się do efektu Bouba/Kiki -- zjawiska
+            tłumaczącego, jak ludzki umysł intuicyjnie łączy abstrakcyjne
+            koncepty z rzeczywistością. Dokładnie to robimy na zajęciach.
+          </div>
+          <br />
+          <a href="#contact" class="btn">Umów rozmowę wstępną</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <h2>Jak pracujemy_</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>01_ Diagnoza błędów</h3>
+          <p>
+            Analizujemy Twój tok myślenia na żywo. Odnajdujemy konkretne miejsce
+            w "algorytmie", w którym pojawia się blada plama, i łatamy ją od
+            podstaw.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>02_ Intuicja i makro</h3>
+          <p>
+            Przekładam abstrakcyjne pojęcia fizyczne i matematyczne na modele
+            mechaniczne z życia codziennego. Najpierw rozumiesz logikę, potem
+            stosujesz wzór.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>03_ Czytanie wskazówek</h3>
+          <p>
+            Uczę, jak rozkodowywać treść zadań maturalnych. Każda informacja w
+            tekście to równanie do układu -- gdy masz ich tyle co niewiadomych,
+            zadanie jest rozwiązane.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="offer">
+      <h2>Oferta & Cennik_</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Indywidualne</h3>
+          <p style="font-size: 1.5rem; font-weight: bold; margin: 10px 0">
+            120 zł / 60 min
+          </p>
+          <p>
+            100% uwagi skupionej na Twoim procesie myślowym. Idealne pod
+            nadrobienie zaległości i przygotowanie do matury rozszerzonej.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Kameralne grupy</h3>
+          <p style="font-size: 1.5rem; font-weight: bold; margin: 10px 0">
+            70 zł / 60 min / os.
+          </p>
+          <p>
+            Praca w małych zespołach (3-5 osób). Wspólne rozwiązywanie arkuszy,
+            dyskusja nad błędami i nauka przez analizę przypadków.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="text-align: center">
+      <h2>Zacznijmy_</h2>
+      <p class="subtitle" style="margin: 0 auto 30px auto">
+        Napisz do mnie bezpośrednio -- ustalimy dogodny termin na krótką,
+        bezpłatną rozmowę wstępną.
+      </p>
+      <a href="mailto:twój-email@domena.pl" class="btn">Napisz e-mail</a>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://github.com/twoj-github" target="_blank">github_</a> ||
+        <a href="https://linkedin.com/in/twoj-profil" target="_blank"
+          >linkedin_</a
+        >
+        ||
+        <a href="mailto:krystian.jasionek@protonmail.com">e-mail_</a>
+      </div>
+
+      <div
+        class="footer-meta"
+        style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7"
+      >
+        <span>[LOC: Wrocław, PL]</span> •
+        <span>[STATUS: Rekrutacja otwarta]</span>
+      </div>
+
+      <div style="margin-top: 10px; font-size: 0.75rem; opacity: 0.5">
+        © 2026 Krystian Jasionek. Built with Three.js & Bun.
+      </div>
+    </footer>
+  </body>
+</html>
