@@ -34,21 +34,55 @@
 
     <section id="about">
       <div class="hero-grid">
-        <img src="images/portrait.jpg" alt="Zdjęcie" class="profile-img" />
+        <div class="image-column">
+          <img src="images/portrait.jpg" alt="Zdjęcie" class="profile-img" />
+          <div class="availability-info-column">
+            <div>
+              <h3>🟢 Spotkania online</h3>
+              <div style="margin-left: 1rem">
+                <p>👤 Konsultacje indywidualne</p>
+                <p>👥 Konsultacje grupowe</p>
+              </div>
+            </div>
+            <div>
+              <h3>📍 Wrocław stacjonarnie</h3>
+              <div style="margin-left: 1rem">
+                <p>👤 Konsultacje indywidualne</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div>
-          <h1>Cześć, fajnie że tu jesteś ☺️</h1>
-          <p style="font-weight: bold; opacity: 0.9">
-            [ Mentoring: Fizyka & Matematyka]
-          </p>
-          <p style="font-weight: bold; opacity: 0.9">
-            [ Szkoła Podstawowa & E8 ]
-          </p>
-          <p style="font-weight: bold; opacity: 0.9">
-            [ Liceum & Matura, Podstawa i Rozszerzenie ]
-          </p>
+          <h1>
+            Mentoring: <span style="font-weight: 500">Fizyka & Matematyka</span>
+          </h1>
           <p style="font-weight: bold; margin-bottom: 15px; opacity: 0.9">
-            [ Lokalizacja: Wrocław & Online ]
+            Kompleksowe przygotowanie do egzaminu według spersonalizowanej
+            metody nauczania
           </p>
+          <div class="hero-columns">
+            <div style="display: flex; gap: 1ch">
+              <div>
+                <h3>🔥</h3>
+              </div>
+              <div>
+                <h3>Matura podstawowa i rozszerzona</h3>
+                <p>Liceum & Technikum</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 1ch">
+              <div>
+                <h3>🍏</h3>
+              </div>
+              <div>
+                <h3>Egzamin ósmoklasisty</h3>
+                <p>Szkoła Podstawowa</p>
+              </div>
+            </div>
+          </div>
+          <h2 style="margin-bottom: 10px; font-family: var(--font-sans)">
+            Hej! Fajnie, że tu jesteś 👋
+          </h2>
           <p class="subtitle">
             Jestem Krystian i zawsze czułem, że tradycyjna szkoła nie potrafi
             pomóc w odkryciu i pełnym zrealizowaniu potencjału ucznia. Musiałem
@@ -175,6 +209,38 @@
             zadanie rozwiązuje się niemal samo.
           </p>
         </div>
+      </div>
+
+      <div>
+        <h3 style="margin-top: 25px; margin-bottom: 10px">
+          Społeczność i materiały // Serwer Discord
+        </h3>
+        <p>
+          Nauka nie kończy się wraz z końcem lekcji. Wszyscy moi uczniowie
+          otrzymują dostęp do prywatnego serwera Discord, który pełni rolę
+          całodobowego środowiska do nauki:
+        </p>
+        <ul
+          style="
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            line-height: 1.8;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+          "
+        >
+          <li>
+            🤝 <strong>Wspólna dyskusja:</strong> Przestrzeń do zadawania pytań,
+            wymiany myśli i wzajemnego wsparcia między uczniami — zawsze pod
+            moim merytorycznym okiem.
+          </li>
+          <li>
+            📚 <strong>Baza materiałów:</strong> Stały dostęp do autorskich
+            opracowań, zestawów zadań oraz schematów, na których pracujemy
+            podczas zajęć.
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -497,7 +563,7 @@
       >
         <div class="service-card" style="padding: 15px; align-items: center">
           <h3>E-mail</h3>
-          <p style="font-size: 0.85rem; margin: 10px 0">
+          <p style="font-size: 1rem; margin: 10px 0">
             krystian.jasionek@protonmail.com
           </p>
           <a
@@ -509,7 +575,7 @@
         </div>
         <div class="service-card" style="padding: 15px; align-items: center">
           <h3>Discord</h3>
-          <p style="font-size: 0.85rem; margin: 10px 0">
+          <p style="font-size: 1rem; margin: 10px 0">
             Serwer & Kontakt (.metarth)
           </p>
           <a
@@ -522,13 +588,23 @@
         </div>
         <div class="service-card" style="padding: 15px; align-items: center">
           <h3>Messenger</h3>
-          <p style="font-size: 0.85rem; margin: 10px 0">@krystian.jasionek</p>
+          <p style="font-size: 1rem; margin: 10px 0">@krystian.jasionek</p>
           <a
             href="https://m.me/krystian.jasionek"
             target="_blank"
             class="btn"
             style="padding: 8px 15px; font-size: 0.85rem"
             >💬 Napisz na FB</a
+          >
+        </div>
+        <div class="service-card" style="padding: 15px; align-items: center">
+          <h3>Telefon</h3>
+          <p style="font-size: 1rem; margin: 10px 0">+48 507-002-159</p>
+          <a
+            href="tel:+48507002159"
+            class="btn"
+            style="padding: 8px 15px; font-size: 0.85rem"
+            >🤙 Zadzwoń</a
           >
         </div>
       </div>
