@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kiki // Mentoring</title>
+    <title>
+      Korepetycje z matematyki i fizyki | Krystian Jasionek – mentoring Wrocław
+      i online
+    </title>
     <link rel="icon" type="image/png" href="/assets/tapir-C2gfeUfl.jpg" />
     <script
       defer
       src="https://cloud.umami.is/script.js"
       data-website-id="230444f7-e58d-4b07-9f83-e1410ad42967"
     ></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DzqPfmaO.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BlcbTw6D.css">
   </head>
 
   <body>
@@ -21,93 +24,255 @@
           alt="Tapir Logo"
           style="height: 28px; width: auto"
         />
-        <span>Kiki // Mentoring</span>
+        <span>Kiki_Mentoring_</span>
       </div>
-      <div class="nav-links">
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Otwórz menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
         <a href="#about">O_mnie_</a>
         <a href="#method">Metoda_</a>
+        <a href="#case-studies">Sukcesy_</a>
         <a href="#reviews">Opinie_</a>
         <a href="#offer">Oferta_</a>
         <a href="#contact">Kontakt_</a>
       </div>
+
+      <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const navLinks = document.getElementById("nav-links");
+        const links = document.querySelectorAll(".nav-links a");
+
+        hamburgerBtn.addEventListener("click", () => {
+          hamburgerBtn.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
+
+        links.forEach((link) => {
+          link.addEventListener("click", () => {
+            hamburgerBtn.classList.remove("active");
+            navLinks.classList.remove("active");
+          });
+        });
+      </script>
     </nav>
 
-    <section id="about">
+    <section id="hero">
       <div class="hero-grid">
-        <img src="/assets/portrait-DZD_fDe2.jpg" alt="Zdjęcie" class="profile-img" />
+        <div class="image-column">
+          <img
+            src="/assets/portrait-DZD_fDe2.jpg"
+            alt="Krystian Jasionek"
+            class="profile-img"
+          />
+        </div>
+
         <div>
-          <h1>Cześć, fajnie że tu jesteś ☺️</h1>
+          <h1>
+            Nie uczę rozwiązywania zadań. Uczę
+            <span style="color: var(--accent)">myślenia</span>.
+          </h1>
+
           <p style="font-weight: bold; margin-bottom: 15px; opacity: 0.9">
-            [ Mentoring: Fizyka & Matematyka | Poziom Podstawowy i Rozszerzony ]
+            Matematyka i fizyka bez wkuwania schematów. Indywidualny mentoring i
+            kameralne warsztaty dla uczniów szkół średnich oraz podstawowych.
           </p>
+
           <p class="subtitle">
-            Jestem Krystian i zawsze czułem, że tradycyjna szkoła nie potrafi
-            pomóc w odkryciu i pełnym zrealizowaniu potencjału ucznia. Musiałem
-            poświęcić lata na opracowanie własnego systemu nauki. Dlatego dziś
-            pomagam młodym ludziom przejść tę samą drogę, tylko znacznie
-            szybciej i bez błądzenia po omacku.
+            Pomagam przejść od „nie wiem, od czego zacząć” do samodzielnego
+            rozwiązywania problemów — na sprawdzianach, egzaminie ósmoklasisty i
+            maturze.
           </p>
-          <p>
-            Jestem inżynierem programistą oraz studentem psychologii. Łączę
-            precyzję z wiedzą o procesach poznawczych -- pomagam przechodzić od
-            stanu „nic z tego nie rozumiem” do swobodnego rozwiązywania
-            problemów maturalnych bez stresu i paraliżu.
-          </p>
-          <p style="margin-top: 15px">
-            Wierzę, że dobry nauczyciel nie tylko przekazuje wiedzę, ale przede
-            wszystkim pokazuje uczniom, jak samemu ją zdobywać. Inspiruje,
-            wspiera i kieruje w rozwoju. Zajęcia, które prowadzę są oparte na
-            metodzie sokratejskiej -- nie podaję gotowych odpowiedzi. Poprzez
-            trafne pytania pomagam uczniom samodzielnie odkryć zasady, którymi
-            rządzi się dany przedmiot oraz opracować sposoby na mierzenie się z
-            problemami z danej dziedziny.
-          </p>
-          <a
-            href="#contact"
-            class="btn"
-            style="margin-top: 20px; display: inline-block"
-            >Umów rozmowę wstępną</a
-          >
+
+          <div class="btn-list">
+            <a href="#contact" class="btn">👉 Umów bezpłatną rozmowę</a>
+            <a href="#method" class="btn secondary"
+              >👉 Zobacz, jak będziemy pracować</a
+            >
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="method">
-      <h2>Jak będziemy pracować_</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>01_ Diagnoza błędów</h3>
-          <p>
-            Wspólnie analizujemy Twój tok myślenia na żywo. Odnajdujemy miejsce,
-            w którym pojawia się luka w logice i wyciągamy z niej wnioski,
-            sięgając do podstaw problemu.
-          </p>
-        </div>
-        <div class="service-card">
-          <h3>02_ Intuicja i makro</h3>
-          <p>
-            Przekładamy abstrakcyjne pojęcia fizyczne i matematyczne na modele z
-            życia codziennego. Najpierw rozumiesz logikę, potem samodzielnie
-            odkrywasz wzór i uczysz się go stosować.
-          </p>
-        </div>
-        <div class="service-card">
-          <h3>03_ Czytanie wskazówek</h3>
-          <p>
-            Uczę, jak rozkodowywać treść zadań egzaminacyjnych. Każda informacja
-            w tekście to równanie do układu -- gdy masz ich tyle co
-            niewiadomych, zadanie rozwiązuje się samo.
-          </p>
-        </div>
+    <section id="about">
+      <h2>Cześć! Jestem Krystian 👋</h2>
+
+      <p class="subtitle">
+        Jestem inżynierem informatyki i studentem psychologii na UWr. Od ponad 6
+        lat pracuję z uczniami (indywidualnie oraz w małych grupach 3–5 osób
+        stacjonarnie we Wrocławiu oraz online), którzy chcą nie tylko poprawić
+        oceny, ale naprawdę zacząć rozumieć matematykę i fizykę.
+      </p>
+
+      <blockquote>
+        „Na moich lekcjach nie daję gotowych odpowiedzi. Zadaję trafne pytania,
+        które prowadzą Cię do samodzielnego odkrycia rozwiązania.”
+      </blockquote>
+    </section>
+
+    <section id="familiar">
+      <h2>Czy to dla Ciebie?</h2>
+
+      <div class="quotes-grid">
+        <p class="subtitle" style="margin-bottom: 0"></p>
+
+        <p class="student-quote">
+          „Uczę się i robię zadania, ale wynik na maturach próbnych nadal nie
+          jest taki, jakiego oczekuję 🤔"
+        </p>
+
+        <p class="student-quote">
+          „Wiem, że stać mnie na więcej, ale nie wiem, co dokładnie powinienem
+          zmienić w nauce 👀"
+        </p>
+
+        <p class="student-quote">
+          „Nie chcę tylko nauczyć się schematów. Chcę naprawdę rozumieć, co
+          robię i umieć poradzić sobie z trudnym zadaniem 🧠"
+        </p>
+      </div>
+
+      <p class="subtitle">
+        Brzmi znajomo? Nie potrzebujesz kolejnych zadań do przerobienia. Czas
+        zmienić strategię nauki.
+      </p>
+
+      <div class="btn-list">
+        <a href="#case-studies" class="btn">👉 Zobacz historie uczniów</a>
+        <a href="#method" class="btn secondary">👉 Zobacz, jak pracuję</a>
+      </div>
+    </section>
+
+    <section id="case-studies">
+      <header>
+        <h2>Sukcesy moich uczniów</h2>
+        <p class="subtitle">
+          Każdy zaczyna z innego miejsca, dlatego sam wynik nic nie mówi o
+          naszych postępach. Oceniając wyniki moich uczniów trzeba spojrzeć na
+          możliwości, potrzeby oraz czas, jakimi dysponowali.
+        </p>
+      </header>
+
+      <div class="cases-grid">
+        <article class="case-card">
+          <header class="case-header">
+            <span class="case-number"
+              ><span class="span-matura">Matura z Fizyki</span> Franek, Michał,
+              Grzesiek</span
+            >
+            <h3>Trzech Muszkieterów</h3>
+          </header>
+
+          <div class="case-body">
+            <div class="case-step">
+              <h4>Punkt wyjścia & Problem</h4>
+              <p>
+                Grupa trzech chłopaków, którzy nie rozszerzali fizyki ani nie
+                uczyli się jej sami. Na próbnych zdobywali w okolicach 10%. Do
+                egzaminu zostało tylko 8 miesięcy.
+              </p>
+            </div>
+
+            <div class="case-step">
+              <h4>Plan działania</h4>
+              <ul class="case-list">
+                <li>
+                  Szybkie zbudowanie solidnych podstaw w kluczowych działach.
+                </li>
+                <li>
+                  Opracowanie strategii podejścia do nieznanych problemów.
+                </li>
+                <li>
+                  Zespołowe rozwiązywanie zadań otwartych i uczenie się na
+                  błędach.
+                </li>
+              </ul>
+            </div>
+
+            <div class="case-step note-box">
+              <h4>Praca nad metodą</h4>
+              <p>
+                Trening samodzielnego wnioskowania zamiast wkuwania schematów.
+                Budowanie pewności siebie przy nieznanych typach zadań.
+              </p>
+            </div>
+          </div>
+
+          <footer class="case-footer">
+            <div class="case-result">
+              <span class="result-label">Wynik końcowy:</span>
+              <span class="result-value"
+                >✅ 78% na maturze rozszerzonej z fizyki</span
+              >
+            </div>
+          </footer>
+        </article>
+
+        <article class="case-card">
+          <header class="case-header">
+            <span class="case-number"
+              ><span class="span-e8">Egzamin ósmoklasisty</span> Hania</span
+            >
+            <h3>Opanowana teoria, problemy z zadaniami</h3>
+          </header>
+
+          <div class="case-body">
+            <div class="case-step">
+              <h4>Punkt wyjścia & Problem</h4>
+              <p>
+                Znajomość wzorów i definicji na wysokim poziomie, ale paraliż
+                przy nietypowych zadaniach. Brak strategii, od czego zacząć,
+                oraz poczucie braku predyspozycji do matematyki.
+              </p>
+            </div>
+
+            <div class="case-step">
+              <h4>Plan działania</h4>
+              <ul class="case-list">
+                <li>Odejście od odtwarzania gotowych schematów.</li>
+                <li>
+                  Głośna analiza problemu i nauka dzielenia zadania na mniejsze
+                  kroki.
+                </li>
+                <li>
+                  Zwiększenie wiary we własne umiejętności i akceptacja błędów.
+                </li>
+              </ul>
+            </div>
+
+            <div class="case-step note-box">
+              <h4>Praca nad metodą</h4>
+              <p>
+                Zamiast gotowych odpowiedzi — pytania naprowadzające na tok
+                rozumowania. Uczeń sam dochodził do kluczowego wniosku.
+              </p>
+            </div>
+          </div>
+
+          <footer class="case-footer">
+            <div class="case-result">
+              <span class="result-label">Wynik końcowy:</span>
+              <span class="result-value">✅ 87% z egzaminu ósmoklasisty</span>
+            </div>
+          </footer>
+        </article>
+      </div>
+
+      <div class="btn-list" style="margin-top: 30px">
+        <a href="#contact" class="btn">👉 Porozmawiajmy o Twoich potrzebach</a>
       </div>
     </section>
 
     <section id="reviews">
-      <h2>Co mówią uczniowie_</h2>
+      <h2>Co mówią uczniowie?</h2>
+
       <p class="subtitle" style="margin-bottom: 30px">
-        Bez ugrzecznionego marketingu -- autentyczne wiadomości od osób, które
-        ze mną pracowały i dostały się na wymarzone studia (m.in. Politechnika
-        Wrocławska).
+        Autentyczne wiadomości od osób, które ze mną pracowały i dostały się na
+        wymarzone studia.
       </p>
 
       <div class="services-grid">
@@ -120,38 +285,12 @@
               margin-bottom: 12px;
             "
           >
-            <h3 style="margin: 0">Marcin Z.</h3>
-            <span
-              style="
-                font-size: 0.85rem;
-                font-weight: bold;
-                background: rgba(255, 255, 255, 0.1);
-                padding: 4px 8px;
-                border-radius: 4px;
-              "
-            >
-              Fizyka: 78%
-            </span>
-          </div>
-          <p style="font-style: italic; opacity: 0.9">
-            „Uważam, że bardzo ciekawe zajęcia. Prowadzący często próbuje
-            nauczać trudnych zagadnień poprzez podawanie prostych przykładów z
-            życia codziennego. Nie przekazuje samej 'suchej' wiedzy, tylko
-            zgłębia ciekawsze tematy w taki sposób, żeby było je łatwiej
-            zrozumieć. Serdecznie polecam!”
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-bottom: 12px;
-            "
-          >
-            <h3 style="margin: 0">Piotr W.</h3>
+            <h4 style="margin: 0">
+              <span class="student-avatar" style="background-color: #d1de8e"
+                >🦊</span
+              >
+              Piotr
+            </h4>
             <span
               style="
                 font-size: 0.85rem;
@@ -164,13 +303,90 @@
               Student PWr
             </span>
           </div>
+
           <p style="font-style: italic; opacity: 0.9">
-            „Wszyscy dostaliśmy się tam, gdzie chcieliśmy (PWr) bez żadnego
-            problemu. Zajęcia prowadzone w przyjazny i zrozumiały sposób, bez
-            niepotrzebnego spinania się. Nastawione na zrozumienie fizyki, a nie
-            wkuwanie wzorów. Duży plus za tłumaczenie wzorów z karty -- to
-            pomaga, gdy są skomplikowane zadania, gdzie trzeba zrobić coś więcej
-            niż tylko przepisać wzór.”
+            „<strong>Wszyscy dostaliśmy się tam, gdzie chcieliśmy (PWr)</strong>
+            bez żadnego problemu. Zajęcia prowadzone w przyjazny i zrozumiały
+            sposób, bez niepotrzebnego spinania się. Nastawione na zrozumienie
+            fizyki, a nie wkuwanie wzorów.”
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 12px;
+            "
+          >
+            <h4 style="margin: 0">
+              <span class="student-avatar" style="background-color: #9c8ede"
+                >🐱</span
+              >
+              Szymon
+            </h4>
+            <span
+              style="
+                font-size: 0.85rem;
+                font-weight: bold;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 4px 8px;
+                border-radius: 4px;
+              "
+            >
+              Student PWr
+            </span>
+          </div>
+
+          <p style="font-style: italic; opacity: 0.9">
+            Atmosfera na zajęciach była świetna, a prowadzący, który jest osobą
+            z ogromnym talentem do przekazywania wiedzy, potrafił odpowiedzieć
+            na każde, nawet najtrudniejsze pytanie.
+            <strong
+              >Z całego serca polecam te zajęcia każdemu, kto chce dobrze
+              przygotować się do matury</strong
+            >
+            lub ma problemy z przyswojeniem fizyki. Naprawdę warto!
+          </p>
+        </div>
+        <div class="service-card">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 12px;
+            "
+          >
+            <h4 style="margin: 0">
+              <span class="student-avatar" style="background-color: #6d85cd"
+                >🐰</span
+              >
+              Marcin
+            </h4>
+            <span
+              style="
+                font-size: 0.85rem;
+                font-weight: bold;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 4px 8px;
+                border-radius: 4px;
+              "
+            >
+              Fizyka: 78%
+            </span>
+          </div>
+
+          <p style="font-style: italic; opacity: 0.9">
+            „Uważam, że bardzo ciekawe zajęcia. Prowadzący często próbuje
+            nauczać trudnych zagadnień poprzez podawanie prostych przykładów z
+            życia codziennego. Nie przekazuje samej suchej wiedzy, tylko
+            <strong
+              >zgłębia ciekawsze tematy w taki sposób, żeby było je łatwiej
+              zrozumieć</strong
+            >. Serdecznie polecam!”
           </p>
         </div>
       </div>
@@ -183,76 +399,562 @@
           font-style: italic;
         "
       >
-        * Dane uczniów zostały zanonimizowane (zmienione imiona i inicjały) w
-        celu ochrony prywatności.
+        * Dane uczniów zostały zmienone w celu ochrony prywatności.
       </p>
     </section>
 
-    <section id="offer">
-      <h2>Oferta & Cennik_</h2>
+    <section id="method">
+      <h2>Jak będziemy pracować?</h2>
+
+      <p class="subtitle"></p>
+
       <div class="services-grid">
         <div class="service-card">
-          <h3>Indywidualne</h3>
-          <p style="font-size: 1.5rem; font-weight: bold; margin: 10px 0">
-            150 zł / 60 min
-          </p>
+          <h3>🩺 Diagnoza</h3>
           <p>
-            100% uwagi skupionej na Twoim procesie myślowym. Idealne pod
-            nadrobienie zaległości i przygotowanie do matury rozszerzonej.
-          </p>
-          <hr style="opacity: 0.2; margin: 15px 0" />
-          <p style="font-size: 0.9rem; opacity: 0.9">
-            <strong>+ Pełny dostęp do zamkniętego Discorda 24/7:</strong> stała
-            społeczność, zadania, wzajemna pomoc i kontakt ze mną między
-            zajęciami.
+            Wspólnie analizujemy Twój tok myślenia i szukamy konkretnego
+            miejsca, w którym zaczynasz się gubić (np. braki w podstawach,
+            stosowanie teorii w zadaniach czy brak pomysłu na start).
           </p>
         </div>
+
         <div class="service-card">
-          <h3>Warsztaty grupowe</h3>
-          <p style="font-size: 1.5rem; font-weight: bold; margin: 10px 0">
-            70 zł / 60 min / os.
-          </p>
+          <h3>🧠 Rozumowanie</h3>
           <p>
-            Praca w małych zespołach (3–5 osób). Wspólne opracowywanie teorii,
-            rozwiązywanie arkuszy, dyskusja nad błędami i nauka przez analizę
-            przypadków.
+            Rozkładamy problem na mniejsze pytania (co wiemy, czego szukamy,
+            dlaczego ten krok). Uczymy się odnajdywać rozwiązanie także przy
+            nietypowych zadaniach.
           </p>
-          <hr style="opacity: 0.2; margin: 15px 0" />
-          <p style="font-size: 0.9rem; opacity: 0.9">
-            <strong>+ Pełny dostęp do zamkniętego Discorda 24/7:</strong> stała
-            społeczność, zadania, wzajemna pomoc i kontakt ze mną między
-            zajęciami.
+        </div>
+
+        <div class="service-card">
+          <h3>🚀 Samodzielność</h3>
+          <p>
+            Z czasem potrzebujesz coraz mniej podpowiedzi. Potrafisz sam znaleźć
+            punkt zaczepienia, przeanalizować problem i wypracować rozwiązanie,
+            nawet w zadaniach, których wcześniej nie widziałeś.
           </p>
+        </div>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          margin-top: 2rem;
+        "
+      >
+        <div>
+          <h2 style="margin-top: 2rem">Co dostajesz w ramach zajęć?</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>🗺️ Indywidualny plan pracy</h3>
+            <p>
+              Dopasowany do Twojego poziomu, celu i czasu, którym dysponujesz.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>📚 Materiały i zadania</h3>
+            <p>Dobierane pod to, nad czym aktualnie pracujemy.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>🔍 Analiza błędów</h3>
+            <p>
+              Wspólnymi siłami szukamy, dlaczego coś poszło nie tak i jak tego
+              uniknąć.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>💬 Kontakt między zajęciami</h3>
+            <p>Discord, pytania, rozwiązania, materiały i społeczność.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>🎯 Przygotowanie pod konkretny cel</h3>
+            <p>
+              Zaległości, matura, egzamin ósmoklasisty albo po prostu pomoc z
+              przedmiotem.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>🚀 Długoterminowa współpraca</h3>
+            <p>
+              Nasza współpraca będzie trwała tak długo, jak chcesz. Od doraźnej
+              pomocy po systematyczne spotkania.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
+    <section
+      id="offer"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <h2>Dopasuj formę współpracy do siebie</h2>
+      <p
+        style="
+          text-align: center;
+          color: var(--muted);
+          max-width: 600px;
+          margin: 0 auto 30px auto;
+          font-size: 1rem;
+        "
+      >
+        Elastyczny mentoring dopasowany do Twojego tempa, celu i stylu nauki.
+        Zbudujmy pewność siebie przed egzaminem.
+      </p>
+
+      <div style="display: flex; justify-content: center; margin-bottom: 40px">
+        <div
+          style="
+            background: #e9ecef;
+            padding: 4px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            display: inline-flex;
+            gap: 4px;
+          "
+        >
+          <button
+            id="btn-e8"
+            onclick="switchLevel('e8')"
+            class="btn-toggle active-toggle"
+          >
+            🎒 Egzamin Ósmoklasisty
+          </button>
+          <button
+            id="btn-podstawa"
+            onclick="switchLevel('podstawa')"
+            class="btn-toggle"
+          >
+            🌱 Matura Podstawowa
+          </button>
+          <button
+            id="btn-rozszerzenie"
+            onclick="switchLevel('rozszerzenie')"
+            class="btn-toggle"
+          >
+            🔥 Matura Rozszerzona
+          </button>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 50px; width: 100%">
+        <h3 style="text-align: center; margin-bottom: 8px">
+          Mentoring Indywidualny
+        </h3>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 25px">
+          100% mojej uwagi, spersonalizowany plan i praca dokładnie nad Twoimi
+          lukami.
+        </p>
+
+        <div id="indiv-level-e8" class="level-content-indiv">
+          <div class="services-grid">
+            <div class="service-card">
+              <h4>💻 Online</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                110 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>400 zł</strong> / m-c <small>(100 zł/h)</small>
+              </div>
+            </div>
+            <div class="service-card">
+              <h4>📖 Stacjonarnie (Wrocław)</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                120 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>430 zł</strong> / m-c <small>(107.5 zł/h)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="indiv-level-podstawa"
+          class="level-content-indiv"
+          style="display: none"
+        >
+          <div class="services-grid">
+            <div class="service-card">
+              <h4>💻 Online</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                130 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>470 zł</strong> / m-c <small>(117.5 zł/h)</small>
+              </div>
+            </div>
+            <div class="service-card">
+              <h4>📖 Stacjonarnie (Wrocław)</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                140 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>500 zł</strong> / m-c <small>(125 zł/h)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="indiv-level-rozszerzenie"
+          class="level-content-indiv"
+          style="display: none"
+        >
+          <div class="services-grid">
+            <div class="service-card">
+              <h4>💻 Online</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                150 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>540 zł</strong> / m-c <small>(135 zł/h)</small>
+              </div>
+            </div>
+            <div class="service-card">
+              <h4>📖 Stacjonarnie (Wrocław)</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                160 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>580 zł</strong> / m-c <small>(145 zł/h)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr
+        style="
+          border: 0;
+          border-top: 1px solid var(--border);
+          margin: 40px auto;
+          max-width: 80%;
+        "
+      />
+
+      <div style="margin-bottom: 40px; width: 100%">
+        <h3 style="text-align: center; margin-bottom: 8px">
+          Warsztaty Grupowe
+        </h3>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 25px">
+          Praca w kameralnych zespołach (3–5 osób). Wspólne rozwiązywanie
+          problemów i wymiana doświadczeń.
+        </p>
+
+        <div id="group-level-e8" class="level-content-group">
+          <div class="services-grid">
+            <div class="service-card">
+              <h4>💻 Online</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                50 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min / os.</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>180 zł</strong> / m-c / os.
+              </div>
+            </div>
+            <div class="service-card" style="opacity: 0.75">
+              <h4>📖 Stacjonarnie (Wrocław)</h4>
+              <div
+                class="note-box"
+                style="margin-top: 15px; text-align: center"
+              >
+                <p style="margin: 0; font-size: 0.9rem">
+                  🚫
+                  <strong
+                    >Zajęcia grupowe odbywają się wyłącznie online.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="group-level-podstawa"
+          class="level-content-group"
+          style="display: none"
+        >
+          <div class="services-grid">
+            <div class="service-card">
+              <h4>💻 Online</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                60 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min / os.</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>215 zł</strong> / m-c / os.
+              </div>
+            </div>
+            <div class="service-card" style="opacity: 0.75">
+              <h4>📖 Stacjonarnie (Wrocław)</h4>
+              <div
+                class="note-box"
+                style="margin-top: 15px; text-align: center"
+              >
+                <p style="margin: 0; font-size: 0.9rem">
+                  🚫
+                  <strong
+                    >Zajęcia grupowe odbywają się wyłącznie online.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="group-level-rozszerzenie"
+          class="level-content-group"
+          style="display: none"
+        >
+          <div class="services-grid">
+            <div class="service-card">
+              <h4>💻 Online</h4>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  margin: 15px 0 5px 0;
+                "
+              >
+                70 zł
+                <span style="font-size: 0.9rem; font-weight: normal"
+                  >/ 60 min / os.</span
+                >
+              </p>
+              <div class="note-box" style="margin-top: 15px">
+                <strong>Pakiet miesięczny (4 lekcje):</strong><br />
+                <strong>250 zł</strong> / m-c / os.
+              </div>
+            </div>
+            <div class="service-card" style="opacity: 0.75">
+              <h4>📖 Stacjonarnie (Wrocław)</h4>
+              <div
+                class="note-box"
+                style="margin-top: 15px; text-align: center"
+              >
+                <p style="margin: 0; font-size: 0.9rem">
+                  🚫
+                  <strong
+                    >Zajęcia grupowe odbywają się wyłącznie online.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px; color: var(--muted); text-align: center">
+        🚀 <strong>W cenie każdego wariantu:</strong> Dostęp 24/7 do prywatnej
+        społeczności na Discordzie, materiałów i bieżącego wsparcia między
+        zajęciami.
+      </div>
+
+      <div class="btn-list" style="margin-top: 30px; justify-content: center">
+        <a href="#contact" class="btn">👉 Sprawdź wolne terminy</a>
+      </div>
+
+      <script>
+        function switchLevel(level) {
+          const levels = ["e8", "podstawa", "rozszerzenie"];
+
+          levels.forEach((l) => {
+            const indivEl = document.getElementById(`indiv-level-${l}`);
+            const groupEl = document.getElementById(`group-level-${l}`);
+            const btnEl = document.getElementById(`btn-${l}`);
+
+            if (l === level) {
+              indivEl.style.display = "block";
+              groupEl.style.display = "block";
+              btnEl.classList.add("active-toggle");
+            } else {
+              indivEl.style.display = "none";
+              groupEl.style.display = "none";
+              btnEl.classList.remove("active-toggle");
+            }
+          });
+        }
+      </script>
+    </section>
+    <section id="faq">
+      <h2>Najczęstsze pytania</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Czy zajęcia są online?</summary>
+          <p>Tak. Prowadzę zajęcia online oraz stacjonarnie we Wrocławiu.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Czy pracujesz z osobami, które mają duże zaległości?
+          </summary>
+          <p>
+            Tak. To jeden z typów problemów, z którymi pracuję najczęściej.
+            Najpierw sprawdzamy, czego faktycznie brakuje, a potem układamy
+            kolejność pracy.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Czy można przygotować się do rozszerzenia od zera?</summary>
+          <p>
+            Tak. W takim przypadku zaczynamy od diagnozy i budujemy plan od
+            podstaw, zamiast udawać, że wszystkie wcześniejsze tematy są już
+            opanowane.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Czy prowadzisz grupy?</summary>
+          <p>Tak. Warsztaty liczą 3–5 osób.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Czy można przyjść tylko na kilka zajęć?</summary>
+          <p>Tak, choć najlepsze efekty daje regularna współpraca.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Czy pierwsza rozmowa kosztuje?</summary>
+          <p>
+            Nie. Najpierw możemy krótko porozmawiać i sprawdzić, czy mogę Ci
+            realnie pomóc.
+          </p>
+        </details>
+      </div>
+    </section>
+
     <section id="contact" style="text-align: center">
-      <h2>Zacznijmy_</h2>
+      <h2>Ciekawi Cię, czy to dla Ciebie?</h2>
+
       <p class="subtitle" style="margin: 0 auto 30px auto">
-        Napisz do mnie bezpośrednio na najwygodniejszej dla Ciebie platformie --
-        ustalimy dogodny termin na krótką, bezpłatną rozmowę wstępną.
+        Napisz albo zadzwoń. Pogadamy chwilę o tym, czego potrzebujesz, i
+        zobaczymy, czy taki sposób nauki ma dla Ciebie sens 🤝
       </p>
 
       <div
         class="services-grid"
         style="max-width: 800px; margin: 0 auto 30px auto"
       >
-        <div class="service-card" style="padding: 15px">
-          <h3>E-mail</h3>
-          <p style="font-size: 0.85rem; margin: 10px 0">
-            krystian.jasionek@protonmail.com
-          </p>
+        <div class="service-card" style="padding: 15px; align-items: center">
+          <h3>Messenger</h3>
+          <p style="font-size: 1rem; margin: 10px 0">@krystian.jasionek</p>
           <a
-            href="mailto:krystian.jasionek@protonmail.com"
+            href="https://m.me/krystian.jasionek"
+            target="_blank"
             class="btn"
             style="padding: 8px 15px; font-size: 0.85rem"
-            >Wyślij maila</a
           >
+            💬 Napisz na FB
+          </a>
         </div>
-        <div class="service-card" style="padding: 15px">
+
+        <div class="service-card" style="padding: 15px; align-items: center">
+          <h3>Telefon</h3>
+          <p style="font-size: 1rem; margin: 10px 0">+48 507-002-159</p>
+          <a
+            href="tel:+48507002159"
+            class="btn"
+            style="padding: 8px 15px; font-size: 0.85rem"
+          >
+            🤙 Zadzwoń
+          </a>
+        </div>
+        <div class="service-card" style="padding: 15px; align-items: center">
           <h3>Discord</h3>
-          <p style="font-size: 0.85rem; margin: 10px 0">
+          <p style="font-size: 1rem; margin: 10px 0">
             Serwer & Kontakt (.metarth)
           </p>
           <a
@@ -260,19 +962,9 @@
             target="_blank"
             class="btn"
             style="padding: 8px 15px; font-size: 0.85rem"
-            >Dołącz na Discordzie</a
           >
-        </div>
-        <div class="service-card" style="padding: 15px">
-          <h3>Messenger</h3>
-          <p style="font-size: 0.85rem; margin: 10px 0">@krystian.jasionek</p>
-          <a
-            href="https://m.me/krystian.jasionek"
-            target="_blank"
-            class="btn"
-            style="padding: 8px 15px; font-size: 0.85rem"
-            >Napisz na FB</a
-          >
+            👾 Dołącz na Discordzie
+          </a>
         </div>
       </div>
     </section>
@@ -280,9 +972,6 @@
     <footer>
       <div class="footer-links">
         <a href="https://github.com/Sztakler" target="_blank">github_</a> ||
-        <a href="https://discord.gg/PKn2T2MGjM" target="_blank">discord_</a> ||
-        <a href="https://m.me/krystian.jasionek" target="_blank">messenger_</a>
-        ||
         <a href="mailto:krystian.jasionek@protonmail.com">e-mail_</a>
       </div>
 
@@ -291,7 +980,7 @@
         style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7"
       >
         <span>[LOC: Wrocław, PL]</span> •
-        <span>[STATUS: Rekrutacja otwarta -- limit miejsc]</span>
+        <span>[STATUS: Rekrutacja otwarta — limit miejsc]</span>
       </div>
 
       <div style="margin-top: 10px; font-size: 0.75rem; opacity: 0.5">
