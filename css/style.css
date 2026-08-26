@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 
 @font-face {
   font-family: "PPMonumentExtended-Black";
@@ -8,60 +9,18 @@
     url("./assets/fonts/PPMonumentExtended-Black.otf") format("opentype");
 }
 
-.monumentextended-black {
-  font-family: "PPMonumentExtended-Black", sans-serif;
-  font-style: normal;
-}
-
-.silkscreen-regular {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.silkscreen-bold {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.red-hat-display-regular {
-  font-family: "Red Hat Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.red-hat-display-semibold {
-  font-family: "Red Hat Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.red-hat-display-bold {
-  font-family: "Red Hat Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.archivo-black-regular {
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 :root {
   --bg: #f8f9fa;
   --text: #121212;
-  --muted: #6c757d;
+  --muted: #4a5055;
   --border: #d0d7de;
   --accent: #377630;
-  --font-mono: "Courier New", Courier, monospace;
+  --green: #61dd3b;
+  --orange: #e88b17;
+  --font-mono: "Atkinson Hyperlegible Mono", "Courier New", Courier, monospace;
   --font-sans:
-    "Red Hat Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
+    "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -110,10 +69,76 @@ nav {
   margin-left: 20px;
   font-size: 1rem;
   font-family: var(--font-mono);
+  font-weight: 500;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text);
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(248, 249, 250, 0.98);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 1.25rem;
+  }
 }
 
 .availability-info-column {
@@ -159,22 +184,37 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 30px;
-  /* font-family: var(--font-mono); */
+  margin-bottom: 0rem;
 }
 
 h3 {
   font-size: 1.6rem;
 }
 
+h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
 blockquote {
   margin: 20px 0;
   padding: 15px 20px;
-  border-left: 4px solid var(--text);
   background: rgba(255, 255, 255, 0.05);
   border-radius: 0 8px 8px 0;
   font-style: italic;
   opacity: 0.95;
+  font-weight: 600;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.student-quote {
+  padding: 0.4rem 1.2rem;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  opacity: 0.95;
+  font-weight: 600;
   line-height: 1.6;
   font-size: 1.2rem;
   color: var(--muted);
@@ -276,7 +316,7 @@ blockquote {
 
 .btn-list {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 footer {
@@ -374,7 +414,7 @@ footer a {
 
   .btn-list {
     flex-direction: column;
-    gap: 0;
+    gap: 1rem;
   }
 }
 
@@ -413,7 +453,8 @@ footer a {
 }
 
 .case-card h3 {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
+  font-kerning: none;
   font-size: 1.2rem;
   line-height: 1.3;
   margin-bottom: 0;
@@ -427,7 +468,7 @@ footer a {
 }
 
 .case-step h4 {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -464,7 +505,7 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
 }
 
 .result-label {
@@ -478,4 +519,24 @@ footer a {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
+}
+
+.span-matura {
+  background-color: var(--orange);
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 0.25rem;
+}
+
+.span-e8 {
+  background-color: var(--green);
+  color: var(--text);
+  text-transform: uppercase;
+  padding: 0.25rem;
+}
+
+.student-avatar {
+  background-color: var(--muted);
+  padding: 0.25rem;
+  border-radius: 999px;
 }
