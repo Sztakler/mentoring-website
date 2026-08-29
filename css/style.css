@@ -610,3 +610,55 @@ footer a {
   border-top: 1px solid var(--border);
   padding-top: 25px;
 }
+
+@media (max-width: 700px) {
+  .cases-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+
+    padding: 5px 20px 20px;
+    margin: 0 -20px;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cases-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cases-grid .case-card {
+    flex: 0 0 calc(100% - 2rem);
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 700px) {
+  .reviews-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+
+    padding: 5px 20px 20px;
+    margin: 0 -20px;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reviews-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviews-carousel .service-card {
+    flex: 0 0 calc(100% - 2rem);
+    scroll-snap-align: start;
+  }
+}
