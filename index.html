@@ -71,6 +71,19 @@
           mobileMenu.classList.remove("active");
         });
       });
+
+      function toggleCases() {
+        const cases = document.querySelector("#case-studies");
+        const button = document.querySelector("#case-studies-toggle");
+
+        const isVisible = cases.classList.toggle("is-visible");
+
+        button.setAttribute("aria-expanded", isVisible);
+
+        button.textContent = isVisible
+          ? "👆 Ukryj sukcesy"
+          : "👉 Zobacz sukcesy moich uczniów";
+      }
     </script>
 
     <section id="hero">
@@ -96,8 +109,8 @@
 
           <p class="subtitle">
             Pomagam przejść od „nie wiem, od czego zacząć” do samodzielnego
-            rozwiązywania problemów — na sprawdzianach, egzaminie ósmoklasisty i
-            maturze.
+            rozwiązywania problemów —
+            <strong>na sprawdzianach, egzaminie ósmoklasisty i maturze</strong>.
           </p>
 
           <div class="btn-list">
@@ -110,20 +123,62 @@
       </div>
     </section>
 
-    <section id="about">
-      <h2>Cześć! Jestem Krystian 👋</h2>
+    <section id="why-kiki">
+      <h2>Dlaczego Kiki Mentoring?</h2>
 
-      <p class="subtitle">
-        Jestem inżynierem informatyki i studentem psychologii na UWr. Od ponad 6
-        lat pracuję z uczniami (indywidualnie oraz w małych grupach 3–5 osób),
-        którzy chcą nie tylko poprawić oceny, ale naprawdę zacząć rozumieć
-        matematykę i fizykę.
-      </p>
+      <ul class="why-kiki-list">
+        <li>
+          <span class="why-kiki-marker">01</span>
+          <div>
+            <strong>Pracujemy nad Twoją samodzielnością.</strong>
+            <p>
+              Zamiast podawać gotowe rozwiązania, prowadzę Cię pytaniami i
+              podsuwam wskazówki tak, żeby pomóc Ci samodzielnie dotrzeć do
+              odpowiedzi. Jesteśmy partnerami w procesie, a każde zajęcia to
+              materiał do wymiany myśli i dyskusji.
+            </p>
+          </div>
+        </li>
 
-      <blockquote>
-        „Na moich lekcjach nie daję gotowych odpowiedzi. Zadaję trafne pytania,
-        które prowadzą Cię do samodzielnego odkrycia rozwiązania.”
-      </blockquote>
+        <li>
+          <span class="why-kiki-marker">02</span>
+          <div>
+            <strong>Najważniejszy jest sposób myślenia.</strong>
+            <p>
+              Nauka schematów i regułek to ślepa uliczka. Pomogę Ci nauczyć się
+              strategii rozumowania, który pozwala rozgryźć nowe problemy i daje
+              głębokie zrozumienie zagadnienia. Łączymy kropki aż poczujemy, że
+              "kliknęło" 🫰
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <span class="why-kiki-marker">03</span>
+          <div>
+            <strong>Wykorzystuję wiedzę z psychologii.</strong>
+            <p>
+              Studiuję psychologię na UWr. Wiem, jak działa motywacja, jak
+              wygląda proces uczenia się i jakie trudności można podczas niego
+              napotkać. Pomogę Ci lepiej zrozumieć własny sposób nauki i znaleźć
+              to, co działa dla Ciebie.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <span class="why-kiki-marker">04</span>
+          <div>
+            <strong>Chcę pomóc Ci rozwinąć skrzydła.</strong>
+            <p>
+              Twój rozwój jest dla mnie najważniejszy. Dążę do tego, żeby
+              nauczyć Cię, jak samodzielnie poradzić sobie z każdym wyzwaniem,
+              jakie możesz napotkać na swojej ściezce edukacji. Z czasem moje
+              wparcie nie będzie Ci już potrzebne.
+            </p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section id="familiar">
@@ -163,293 +218,97 @@
       </p>
 
       <div class="btn-list">
-        <a href="#case-studies" class="btn">👉 Zobacz historie uczniów</a>
+        <a
+          href="#case-studies"
+          id="case-studies-toggle"
+          class="btn"
+          onclick="toggleCases()"
+          >👉 Zobacz sukcesy moich uczniów</a
+        >
         <a href="#method" class="btn secondary">👉 Zobacz, jak pracuję</a>
       </div>
-    </section>
 
-    <section id="case-studies">
-      <header>
-        <h2>Sukcesy moich uczniów</h2>
-        <p class="subtitle">
-          Każdy zaczyna z innego miejsca, dlatego sam wynik nic nie mówi o
-          naszych postępach. Oceniając wyniki moich uczniów trzeba spojrzeć na
-          możliwości, potrzeby oraz czas, jakimi dysponowali.
-        </p>
-      </header>
+      <div id="case-studies">
+        <header>
+          <h3>Sukcesy moich uczniów</h3>
+          <p class="subtitle">
+            Dwa przykłady tego, co można osiągnąć, zmieniając sposób nauki.
+          </p>
+        </header>
 
-      <div class="cases-grid">
-        <details class="case-card">
-          <summary class="case-summary">
-            <div class="case-summary-main">
-              <span class="case-number">
-                <span class="span-matura">Matura z Fizyki</span>
-                <span>Franek, Michał, Grzesiek</span>
-              </span>
-
-              <h3>Trzech Muszkieterów</h3>
-            </div>
-
-            <div class="case-summary-result">
-              <span>Wynik</span>
-              <strong>78%</strong>
-            </div>
-
-            <span class="case-toggle" aria-hidden="true">⌄</span>
-          </summary>
-
-          <div class="case-expanded">
-            <div class="case-body">
-              <div class="case-step">
-                <h4>Punkt wyjścia & Problem</h4>
-                <p>
-                  Grupa trzech chłopaków, którzy nie rozszerzali fizyki ani nie
-                  uczyli się jej sami. Na próbnych zdobywali w okolicach 10%. Do
-                  egzaminu zostało tylko 8 miesięcy.
-                </p>
-              </div>
-
-              <div class="case-step">
-                <h4>Plan działania</h4>
-                <ul class="case-list">
-                  <li>
-                    Szybkie zbudowanie solidnych podstaw w kluczowych działach.
-                  </li>
-                  <li>
-                    Opracowanie strategii podejścia do nieznanych problemów.
-                  </li>
-                  <li>
-                    Zespołowe rozwiązywanie zadań otwartych i uczenie się na
-                    błędach.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="case-step note-box">
-                <h4>Praca nad metodą</h4>
-                <p>
-                  Trening samodzielnego wnioskowania zamiast wkuwania schematów.
-                  Budowanie pewności siebie przy nieznanych typach zadań.
-                </p>
-              </div>
-            </div>
-
-            <footer class="case-footer">
-              <div class="case-result">
-                <span class="result-label">Wynik końcowy:</span>
-                <span class="result-value">
-                  ✅ 78% na maturze rozszerzonej z fizyki
+        <div class="cases-grid">
+          <article class="case-card">
+            <div class="case-summary">
+              <div class="case-summary-main">
+                <span class="case-number">
+                  <span class="span-matura">Matura z fizyki</span>
+                  <span>Franek, Michał, Grzesiek</span>
                 </span>
-              </div>
-            </footer>
-          </div>
-        </details>
 
-        <details class="case-card">
-          <summary class="case-summary">
-            <div class="case-summary-main">
-              <span class="case-number">
-                <span class="span-e8">Egzamin ósmoklasisty</span>
-                <span>Hania</span>
-              </span>
-
-              <h3>Opanowana teoria, problemy z zadaniami</h3>
-            </div>
-
-            <div class="case-summary-result">
-              <span>Wynik</span>
-              <strong>87%</strong>
-            </div>
-
-            <span class="case-toggle" aria-hidden="true">⌄</span>
-          </summary>
-
-          <div class="case-expanded">
-            <div class="case-body">
-              <div class="case-step">
-                <h4>Punkt wyjścia & Problem</h4>
-                <p>
-                  Znajomość wzorów i definicji na wysokim poziomie, ale paraliż
-                  przy nietypowych zadaniach. Brak strategii, od czego zacząć,
-                  oraz poczucie braku predyspozycji do matematyki.
-                </p>
+                <h3>Z 10% do 78%</h3>
               </div>
 
-              <div class="case-step">
-                <h4>Plan działania</h4>
-                <ul class="case-list">
-                  <li>Odejście od odtwarzania gotowych schematów.</li>
-                  <li>
-                    Głośna analiza problemu i nauka dzielenia zadania na
-                    mniejsze kroki.
-                  </li>
-                  <li>
-                    Zwiększenie wiary we własne umiejętności i akceptacja
-                    błędów.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="case-step note-box">
-                <h4>Praca nad metodą</h4>
-                <p>
-                  Zamiast gotowych odpowiedzi — pytania naprowadzające na tok
-                  rozumowania. Uczeń sam dochodził do kluczowego wniosku.
-                </p>
+              <div class="case-summary-result">
+                <span>Wynik</span>
+                <strong>78%</strong>
               </div>
             </div>
 
-            <footer class="case-footer">
+            <div class="case-expanded">
+              <p>
+                Chłopaki nie rozszerzali fizyki, a na próbnych maturach
+                zdobywali około <strong>10%</strong>. Do egzaminu zostało 8
+                miesięcy.
+              </p>
+
+              <p>
+                Zamiast uczyć się schematów, skupiliśmy się na podstawach,
+                rozumowaniu i samodzielnym podejściu do nieznanych zadań.
+              </p>
+
               <div class="case-result">
-                <span class="result-label">Wynik końcowy:</span>
-                <span class="result-value">
-                  ✅ 87% z egzaminu ósmoklasisty
-                </span>
+                <span class="result-label">Matura rozszerzona z fizyki:</span>
+                <span class="result-value">78%</span>
               </div>
-            </footer>
-          </div>
-        </details>
-      </div>
+            </div>
+          </article>
 
-      <div class="btn-list" style="margin-top: 30px">
-        <a href="#contact" class="btn">👉 Porozmawiajmy o Twoich potrzebach</a>
-      </div>
-    </section>
+          <article class="case-card">
+            <div class="case-summary">
+              <div class="case-summary-main">
+                <span class="case-number">
+                  <span class="span-e8">Egzamin ósmoklasisty</span>
+                  <span>Hania</span>
+                </span>
 
-    <section id="reviews">
-      <h2>Co mówią uczniowie?</h2>
+                <h3>Znała teorię. Nie wiedziała, jak zacząć.</h3>
+              </div>
 
-      <p class="subtitle" style="margin-bottom: 30px">
-        Autentyczne wiadomości od osób, które ze mną pracowały i dostały się na
-        wymarzone studia.
-      </p>
+              <div class="case-summary-result">
+                <span>Wynik</span>
+                <strong>87%</strong>
+              </div>
+            </div>
 
-      <div class="services-grid reviews-carousel">
-        <div class="service-card">
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-bottom: 12px;
-            "
-          >
-            <h4 style="margin: 0">
-              <span class="student-avatar" style="background-color: #d1de8e"
-                >🦊</span
-              >
-              Piotr
-            </h4>
-            <span
-              style="
-                font-size: 0.85rem;
-                font-weight: bold;
-                background: rgba(255, 255, 255, 0.1);
-                padding: 4px 8px;
-                border-radius: 4px;
-              "
-            >
-              Student PWr
-            </span>
-          </div>
+            <div class="case-expanded">
+              <p>
+                Hania dobrze znała wzory i definicje, ale blokowała się przy
+                nietypowych zadaniach i nie wiedziała, od czego zacząć.
+              </p>
 
-          <p style="font-style: italic; opacity: 0.9">
-            „<strong>Wszyscy dostaliśmy się tam, gdzie chcieliśmy (PWr)</strong>
-            bez żadnego problemu. Zajęcia prowadzone w przyjazny i zrozumiały
-            sposób, bez niepotrzebnego spinania się. Nastawione na zrozumienie
-            fizyki, a nie wkuwanie wzorów.”
-          </p>
-        </div>
+              <p>
+                Pracowaliśmy nad analizą problemu, dzieleniem go na mniejsze
+                kroki i samodzielnym dochodzeniem do rozwiązania.
+              </p>
 
-        <div class="service-card">
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-bottom: 12px;
-            "
-          >
-            <h4 style="margin: 0">
-              <span class="student-avatar" style="background-color: #9c8ede"
-                >🐱</span
-              >
-              Szymon
-            </h4>
-            <span
-              style="
-                font-size: 0.85rem;
-                font-weight: bold;
-                background: rgba(255, 255, 255, 0.1);
-                padding: 4px 8px;
-                border-radius: 4px;
-              "
-            >
-              Student PWr
-            </span>
-          </div>
-
-          <p style="font-style: italic; opacity: 0.9">
-            Atmosfera na zajęciach była świetna, a prowadzący, który jest osobą
-            z ogromnym talentem do przekazywania wiedzy, potrafił odpowiedzieć
-            na każde, nawet najtrudniejsze pytanie.
-            <strong
-              >Z całego serca polecam te zajęcia każdemu, kto chce dobrze
-              przygotować się do matury</strong
-            >
-            lub ma problemy z przyswojeniem fizyki. Naprawdę warto!
-          </p>
-        </div>
-        <div class="service-card">
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-bottom: 12px;
-            "
-          >
-            <h4 style="margin: 0">
-              <span class="student-avatar" style="background-color: #6d85cd"
-                >🐰</span
-              >
-              Marcin
-            </h4>
-            <span
-              style="
-                font-size: 0.85rem;
-                font-weight: bold;
-                background: rgba(255, 255, 255, 0.1);
-                padding: 4px 8px;
-                border-radius: 4px;
-              "
-            >
-              Fizyka: 78%
-            </span>
-          </div>
-
-          <p style="font-style: italic; opacity: 0.9">
-            „Uważam, że bardzo ciekawe zajęcia. Prowadzący często próbuje
-            nauczać trudnych zagadnień poprzez podawanie prostych przykładów z
-            życia codziennego. Nie przekazuje samej suchej wiedzy, tylko
-            <strong
-              >zgłębia ciekawsze tematy w taki sposób, żeby było je łatwiej
-              zrozumieć</strong
-            >. Serdecznie polecam!”
-          </p>
+              <div class="case-result">
+                <span class="result-label">Egzamin ósmoklasisty:</span>
+                <span class="result-value">87%</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-
-      <p
-        style="
-          font-size: 0.8rem;
-          opacity: 0.6;
-          margin-top: 20px;
-          font-style: italic;
-        "
-      >
-        * Dane uczniów zostały zmienione w celu ochrony prywatności.
-      </p>
     </section>
 
     <section id="method">
@@ -924,6 +783,175 @@
         }
       </script>
     </section>
+
+    <section id="about">
+      <h2>Kim jestem?</h2>
+
+      <p class="subtitle">
+        Nazywam się Krystian Jasionek. Jestem inżynierem informatyki i studentem
+        psychologii na Uniwersytecie Wrocławskim.
+      </p>
+
+      <p class="subtitle">
+        Od ponad 6 lat pracuję z uczniami indywidualnie oraz w małych grupach.
+        Prowadzę zajęcia z matematyki, fizyki i informatyki, pomagając nie tylko
+        nadrobić zaległości czy przygotować się do egzaminu, ale przede
+        wszystkim nauczyć się samodzielnie rozwiązywać problemy.
+      </p>
+
+      <p class="subtitle">
+        Łączę inżynierski sposób myślenia i głębokie zrozumienie nauk ścisłych z
+        wiedzą o procesach uczenia się i psychologii. To fundament mojego
+        podejście do nauczania.
+      </p>
+
+      <div class="about-stats">
+        <div><strong>6+</strong> <span>lat pracy z uczniami</span></div>
+        <div><strong>50+</strong> <span>prowadzonych uczniów</span></div>
+        <div><strong>2x</strong> <span>Inżynier i psycholog</span></div>
+      </div>
+
+      <p class="about-subjects">
+        <strong>MATEMATYKA × FIZYKA × INFORMATYKA</strong>
+      </p>
+    </section>
+
+    <section id="reviews">
+      <h2>Co mówią uczniowie?</h2>
+
+      <p class="subtitle" style="margin-bottom: 30px">
+        Autentyczne wiadomości od osób, które ze mną pracowały i dostały się na
+        wymarzone studia.
+      </p>
+
+      <div class="services-grid reviews-carousel">
+        <div class="service-card">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 12px;
+            "
+          >
+            <h4 style="margin: 0">
+              <span class="student-avatar" style="background-color: #d1de8e"
+                >🦊</span
+              >
+              Piotr
+            </h4>
+            <span
+              style="
+                font-size: 0.85rem;
+                font-weight: bold;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 4px 8px;
+                border-radius: 4px;
+              "
+            >
+              Student PWr
+            </span>
+          </div>
+
+          <p style="font-style: italic; opacity: 0.9">
+            „<strong>Wszyscy dostaliśmy się tam, gdzie chcieliśmy (PWr)</strong>
+            bez żadnego problemu. Zajęcia prowadzone w przyjazny i zrozumiały
+            sposób, bez niepotrzebnego spinania się. Nastawione na zrozumienie
+            fizyki, a nie wkuwanie wzorów.”
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 12px;
+            "
+          >
+            <h4 style="margin: 0">
+              <span class="student-avatar" style="background-color: #9c8ede"
+                >🐱</span
+              >
+              Szymon
+            </h4>
+            <span
+              style="
+                font-size: 0.85rem;
+                font-weight: bold;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 4px 8px;
+                border-radius: 4px;
+              "
+            >
+              Student PWr
+            </span>
+          </div>
+
+          <p style="font-style: italic; opacity: 0.9">
+            Atmosfera na zajęciach była świetna, a prowadzący, który jest osobą
+            z ogromnym talentem do przekazywania wiedzy, potrafił odpowiedzieć
+            na każde, nawet najtrudniejsze pytanie.
+            <strong
+              >Z całego serca polecam te zajęcia każdemu, kto chce dobrze
+              przygotować się do matury</strong
+            >
+            lub ma problemy z przyswojeniem fizyki. Naprawdę warto!
+          </p>
+        </div>
+        <div class="service-card">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 12px;
+            "
+          >
+            <h4 style="margin: 0">
+              <span class="student-avatar" style="background-color: #6d85cd"
+                >🐰</span
+              >
+              Marcin
+            </h4>
+            <span
+              style="
+                font-size: 0.85rem;
+                font-weight: bold;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 4px 8px;
+                border-radius: 4px;
+              "
+            >
+              Fizyka: 78%
+            </span>
+          </div>
+
+          <p style="font-style: italic; opacity: 0.9">
+            „Uważam, że bardzo ciekawe zajęcia. Prowadzący często próbuje
+            nauczać trudnych zagadnień poprzez podawanie prostych przykładów z
+            życia codziennego. Nie przekazuje samej suchej wiedzy, tylko
+            <strong
+              >zgłębia ciekawsze tematy w taki sposób, żeby było je łatwiej
+              zrozumieć</strong
+            >. Serdecznie polecam!”
+          </p>
+        </div>
+      </div>
+
+      <p
+        style="
+          font-size: 0.8rem;
+          opacity: 0.6;
+          margin-top: 20px;
+          font-style: italic;
+        "
+      >
+        * Dane uczniów zostały zmienione w celu ochrony prywatności.
+      </p>
+    </section>
+
     <section id="faq">
       <h2>Najczęstsze pytania</h2>
 
