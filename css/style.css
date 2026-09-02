@@ -360,6 +360,12 @@ blockquote {
   gap: 30px;
 }
 
+.service-item {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.8rem;
+  min-width: 0;
+}
 .service-card {
   border: 1px solid var(--border);
   padding: 24px;
@@ -373,6 +379,15 @@ blockquote {
   font-size: 1.2rem;
   margin-bottom: 12px;
   font-family: var(--font-mono);
+}
+
+.card-number {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  padding-top: 1.2rem;
 }
 
 .note-box {
