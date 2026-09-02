@@ -15,10 +15,10 @@
   --muted: #4a5055;
   --border: #d0d7de;
   --accent: #377630;
-  --green: #61dd3b;
-  --orange: #e88b17;
-  --blue: #4954b6;
-  --red: #b64952;
+  --green: #64d36d;
+  --orange: #d9a46f;
+  --blue: #5f90d4;
+  --red: #e0811f;
   --gray: #e9ecef;
   --bg-primary: #f8f9fa;
   --bg-secondary: #e88b17;
@@ -367,8 +367,8 @@ blockquote {
 }
 
 .bubble-green {
-  background: var(--accent);
-  color: white;
+  background: var(--green);
+  color: var(--bg);
 }
 
 .bubble-blue {
@@ -531,7 +531,7 @@ footer {
 .footer-eyebrow,
 .footer-label {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.08em;
   color: var(--muted);
   text-transform: uppercase;
@@ -539,7 +539,7 @@ footer {
 
 .footer-brand h2 {
   margin: 2rem 0;
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: 3rem;
   line-height: 0.95;
   letter-spacing: -0.04em;
 }
@@ -1009,7 +1009,7 @@ footer {
 .why-kiki-list strong {
   display: block;
   margin-bottom: 4px;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .why-kiki-list p {
