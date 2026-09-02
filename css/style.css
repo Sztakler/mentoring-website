@@ -17,6 +17,8 @@
   --accent: #377630;
   --green: #61dd3b;
   --orange: #e88b17;
+  --blue: #4954b6;
+  --red: #b64952;
   --gray: #e9ecef;
   --bg-primary: #f8f9fa;
   --bg-secondary: #e88b17;
@@ -361,9 +363,22 @@ blockquote {
 }
 
 .chat-message-right .chat-bubble {
+  border-radius: 18px 18px 5px 18px;
+}
+
+.bubble-green {
   background: var(--accent);
   color: white;
-  border-radius: 18px 18px 5px 18px;
+}
+
+.bubble-blue {
+  background: var(--blue);
+  color: white;
+}
+
+.bubble-red {
+  background: var(--red);
+  color: white;
 }
 
 .chat-message .student-avatar {
