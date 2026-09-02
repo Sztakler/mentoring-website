@@ -17,15 +17,29 @@
   </head>
 
   <body>
-    <nav>
-      <div class="brand" style="display: flex; align-items: center; gap: 10px">
-        <img
-          src="./images/tapir.jpg"
-          alt="Tapir Logo"
-          style="height: 28px; width: auto"
-        />
-        <span>Kiki_Mentoring_</span>
+    <nav class="desktop-nav">
+      <div class="desktop-nav-links desktop-nav-links-left">
+        <a href="#method">Metoda nauczania</a>
+        <a href="#offer">Oferta zajęć</a>
       </div>
+
+      <a href="#" class="brand">
+        <img src="./images/tapir.jpg" alt="Tapir Logo" />
+        <span>Kiki Mentoring</span>
+      </a>
+
+      <div class="desktop-nav-links desktop-nav-links-right">
+        <a href="#reviews">Opinie uczniów</a>
+        <a href="#about">O mnie</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </nav>
+
+    <nav class="mobile-nav">
+      <a href="#" class="brand">
+        <img src="./images/tapir.jpg" alt="Tapir Logo" />
+        <span>Kiki Mentoring</span>
+      </a>
 
       <button class="hamburger" id="hamburger-btn" aria-label="Otwórz menu">
         <span></span>
@@ -33,33 +47,31 @@
         <span></span>
       </button>
 
-      <div class="nav-links" id="nav-links">
-        <a href="#about">O_mnie_</a>
-        <a href="#method">Metoda_</a>
-        <a href="#case-studies">Sukcesy_</a>
-        <a href="#reviews">Opinie_</a>
-        <a href="#offer">Oferta_</a>
-        <a href="#contact">Kontakt_</a>
+      <div class="mobile-nav-menu" id="mobile-nav-menu">
+        <a href="#method">Metoda nauczania</a>
+        <a href="#offer">Oferta zajęć</a>
+        <a href="#reviews">Opinie uczniów</a>
+        <a href="#about">O mnie</a>
+        <a href="#contact">Kontakt</a>
       </div>
-
-      <script>
-        const hamburgerBtn = document.getElementById("hamburger-btn");
-        const navLinks = document.getElementById("nav-links");
-        const links = document.querySelectorAll(".nav-links a");
-
-        hamburgerBtn.addEventListener("click", () => {
-          hamburgerBtn.classList.toggle("active");
-          navLinks.classList.toggle("active");
-        });
-
-        links.forEach((link) => {
-          link.addEventListener("click", () => {
-            hamburgerBtn.classList.remove("active");
-            navLinks.classList.remove("active");
-          });
-        });
-      </script>
     </nav>
+    <script>
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const mobileMenu = document.getElementById("mobile-nav-menu");
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+
+      hamburgerBtn.addEventListener("click", () => {
+        hamburgerBtn.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburgerBtn.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        });
+      });
+    </script>
 
     <section id="hero">
       <div class="hero-grid">
