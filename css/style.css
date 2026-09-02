@@ -10,16 +10,18 @@
 }
 
 :root {
-  --bg: #f8f9fa;
-  --text: #121212;
-  --muted: #4a5055;
+  --bg: #fafafa;
+  --text: #151515;
+  /* --muted: #4a5055; */
+  --muted: #282828;
   --border: #d0d7de;
-  --accent: #377630;
-  --green: #64d36d;
-  --orange: #d9a46f;
-  --blue: #5f90d4;
+  /* --accent: #377630; */
+  --accent: #fb8443;
+  --green: #c6ff55;
+  --orange: #fb8443;
+  --blue: #5152cb;
   --red: #e0811f;
-  --gray: #e9ecef;
+  --gray: #eaede3;
   --bg-primary: #f8f9fa;
   --bg-secondary: #e88b17;
   --font-mono: "Atkinson Hyperlegible Mono", "Courier New", Courier, monospace;
@@ -368,7 +370,6 @@ blockquote {
 
 .bubble-green {
   background: var(--green);
-  color: var(--bg);
 }
 
 .bubble-blue {
@@ -1140,7 +1141,6 @@ footer {
 
 .case-number .span-matura,
 .case-number .span-e8 {
-  color: var(--accent);
   font-weight: 700;
   text-transform: uppercase;
 }
